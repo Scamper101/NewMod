@@ -1,0 +1,15 @@
+[
+ {
+     "modid": "newmod",
+     "name": "New Mod",
+     "description": "My First Attempt at a Minecraft mod",
+     "version": "1.0",
+     "mcversion": "1.7.2",
+     "url": "",
+     "updateUrl": "",
+     "authorList": ["Scamp"],
+     "credits": "Pahimar for teaching me to mod!",
+     "parent": "",
+     "dependencies": [ ]
+ }
+ ]
