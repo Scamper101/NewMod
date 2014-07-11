@@ -1,5 +1,6 @@
 package com.scamp.newmod;
 
+import com.scamp.newmod.configuration.ConfigurationHandler;
 import com.scamp.newmod.proxy.IProxy;
 import com.scamp.newmod.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -14,13 +15,13 @@ public class newmod
     @Mod.Instance(Reference.MOD_ID)
   public static newmod instance;
 
-    @SidedProxy(clientSide = "com.scamp.newmod.proxy.ClientProxy", serverSide = "com.scamp.newmod.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
